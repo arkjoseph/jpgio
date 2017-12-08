@@ -7,5 +7,4 @@ sites/*/files
 sites/*/private
 
 # Ignore modules and themes. They come from seperate repo.
-sites/all/modules
-sites/all/themes
+sites/all/*
