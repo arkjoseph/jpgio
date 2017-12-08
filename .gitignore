@@ -6,5 +6,4 @@ files/
 sites/*/files
 sites/*/private
 
-sites/all/module
-s
+sites/all/modules
