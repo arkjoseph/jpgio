@@ -3,7 +3,7 @@ api = "2"
 
 ; Core
 ; TODO Can I download core from my own repo?
-projects[drupal][version] = "7.56"
+; projects[drupal][version] = "7.56"
 
 ; +++++ Modules +++++
 
