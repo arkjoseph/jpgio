@@ -38,6 +38,9 @@ projects[media_ckeditor][subdir] = "contrib"
 projects[webform][subdir] = "4.16"
 projects[webform][subdir] = "contrib"
 
+projects[pathauto][subdir] = "1.3"
+projects[pathauto][subdir] = "contrib"
+
 ;Features
 projects[site_features][type] = "module"
 projects[site_features][download][type] = "git"

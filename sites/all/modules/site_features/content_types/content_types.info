@@ -16,4 +16,5 @@ features[field_instance][] = node-page-body
 features[filter][] = plain_text
 features[node][] = page
 features[taxonomy][] = tags
+features[user_permission][] = use text format editor
 features[user_role][] = administrator
