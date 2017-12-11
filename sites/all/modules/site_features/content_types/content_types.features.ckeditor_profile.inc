@@ -166,7 +166,7 @@ function content_types_ckeditor_profile_defaults() {
         ),
       ),
       'input_formats' => array(
-        'editor' => 'Editor',
+        'editor' => 'editor',
       ),
     ),
   );
