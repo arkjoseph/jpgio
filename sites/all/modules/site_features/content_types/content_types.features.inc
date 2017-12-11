@@ -9,6 +9,14 @@
  */
 function content_types_node_info() {
   $items = array(
+    'blog' => array(
+      'name' => t('Blog'),
+      'base' => 'node_content',
+      'description' => t('Personal Blog content.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
