@@ -68,7 +68,7 @@ function content_types_ckeditor_profile_defaults() {
     'CKEditor Global Profile' => array(
       'name' => 'CKEditor Global Profile',
       'settings' => array(
-        'skin' => 'office2003',
+        'skin' => 'kama',
         'ckeditor_path' => '%l/ckeditor',
         'ckeditor_local_path' => '',
         'ckeditor_plugins_path' => '%m/plugins',
