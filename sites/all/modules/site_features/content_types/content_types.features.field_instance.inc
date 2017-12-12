@@ -189,6 +189,12 @@ function content_types_field_default_field_instances() {
         'type' => 'image',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_hero_page_image',
