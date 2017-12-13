@@ -36,14 +36,14 @@ stylesheets[print][] = css/print.css
 scripts[] = js/build/scripts.js
 scripts[] = js/build/modernizr.js
 
-settings[basic_tabs] = 1
-settings[basic_breadcrumb] = 1
-settings[basic_breadcrumb_home] = 1
-settings[basic_breadcrumb_separator] = »
+settings[jpgio_tabs] = 1
+settings[jpgio_breadcrumb] = 1
+settings[jpgio_breadcrumb_home] = 1
+settings[jpgio_breadcrumb_separator] = »
 settings[clear_registry] = 0
-settings[basic_ie_enabled] = 0
-settings[basic_ie_enabled_versions][ie8] = 0
-settings[basic_ie_enabled_versions][ie9] = 0
+settings[jpgio_ie_enabled] = 0
+settings[jpgio_ie_enabled_versions][ie8] = 0
+settings[jpgio_ie_enabled_versions][ie9] = 0
 
 ; Information added by Drupal.org packaging script on 2016-09-13
 version = "7.x-4.3"
