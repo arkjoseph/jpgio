@@ -8,91 +8,91 @@
 /**
  * Impelements hook_form_system_theme_settings_alter().
  */
-function basic_form_system_theme_settings_alter(&$form, $form_state) {
+function jpgio_form_system_theme_settings_alter(&$form, $form_state) {
   $form['options_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Theme Specific Settings'),
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
-  $form['options_settings']['basic_tabs'] = array(
+  $form['options_settings']['jpgio_tabs'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use the ZEN tabs'),
     '#description' => t('Check this if you wish to replace the default tabs by the ZEN tabs'),
-    '#default_value' => theme_get_setting('basic_tabs'),
+    '#default_value' => theme_get_setting('jpgio_tabs'),
   );
-  $form['options_settings']['basic_breadcrumb'] = array(
+  $form['options_settings']['jpgio_breadcrumb'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumb settings'),
-    '#attributes' => array('id' => 'basic-breadcrumb'),
+    '#attributes' => array('id' => 'jpgio-breadcrumb'),
   );
-  $form['options_settings']['basic_breadcrumb']['basic_breadcrumb'] = array(
+  $form['options_settings']['jpgio_breadcrumb']['jpgio_breadcrumb'] = array(
     '#type' => 'select',
     '#title' => t('Display breadcrumb'),
-    '#default_value' => theme_get_setting('basic_breadcrumb'),
+    '#default_value' => theme_get_setting('jpgio_breadcrumb'),
     '#options' => array(
       'yes' => t('Yes'),
       'admin' => t('Only in admin section'),
       'no' => t('No'),
     ),
   );
-  $form['options_settings']['basic_breadcrumb']['basic_breadcrumb_separator'] = array(
+  $form['options_settings']['jpgio_breadcrumb']['jpgio_breadcrumb_separator'] = array(
     '#type' => 'textfield',
     '#title' => t('Breadcrumb separator'),
     '#description' => t('Text only. Don’t forget to include spaces.'),
-    '#default_value' => theme_get_setting('basic_breadcrumb_separator'),
+    '#default_value' => theme_get_setting('jpgio_breadcrumb_separator'),
     '#size' => 5,
     '#maxlength' => 10,
     // Jquery hook to show/hide optional widgets.
-    '#prefix' => '<div id="div-basic-breadcrumb-collapse">',
+    '#prefix' => '<div id="div-jpgio-breadcrumb-collapse">',
   );
-  $form['options_settings']['basic_breadcrumb']['basic_breadcrumb_home'] = array(
+  $form['options_settings']['jpgio_breadcrumb']['jpgio_breadcrumb_home'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show home page link in breadcrumb'),
-    '#default_value' => theme_get_setting('basic_breadcrumb_home'),
+    '#default_value' => theme_get_setting('jpgio_breadcrumb_home'),
   );
-  $form['options_settings']['basic_breadcrumb']['basic_breadcrumb_trailing'] = array(
+  $form['options_settings']['jpgio_breadcrumb']['jpgio_breadcrumb_trailing'] = array(
     '#type' => 'checkbox',
     '#title' => t('Append a separator to the end of the breadcrumb'),
-    '#default_value' => theme_get_setting('basic_breadcrumb_trailing'),
+    '#default_value' => theme_get_setting('jpgio_breadcrumb_trailing'),
     '#description' => t('Useful when the breadcrumb is placed just before the title.'),
   );
-  $form['options_settings']['basic_breadcrumb']['basic_breadcrumb_title'] = array(
+  $form['options_settings']['jpgio_breadcrumb']['jpgio_breadcrumb_title'] = array(
     '#type' => 'checkbox',
     '#title' => t('Append the content title to the end of the breadcrumb'),
-    '#default_value' => theme_get_setting('basic_breadcrumb_title'),
+    '#default_value' => theme_get_setting('jpgio_breadcrumb_title'),
     '#description' => t('Useful when the breadcrumb is not placed just before the title.'),
     '#suffix' => '</div>',
   );
 
   // IE specific settings.
-  $form['options_settings']['basic_ie'] = array(
+  $form['options_settings']['jpgio_ie'] = array(
     '#type' => 'fieldset',
     '#title' => t('Internet Explorer Stylesheets'),
-    '#attributes' => array('id' => 'basic-ie'),
+    '#attributes' => array('id' => 'jpgio-ie'),
   );
-  $form['options_settings']['basic_ie']['basic_ie_enabled'] = array(
+  $form['options_settings']['jpgio_ie']['jpgio_ie_enabled'] = array(
     '#type' => 'checkbox',
     '#title' => t('Enable Internet Explorer stylesheets in theme'),
-    '#default_value' => theme_get_setting('basic_ie_enabled'),
+    '#default_value' => theme_get_setting('jpgio_ie_enabled'),
     '#description' => t('If you check this box you can choose which IE stylesheets in theme get rendered on display.'),
   );
-  $form['options_settings']['basic_ie']['basic_ie_enabled_css'] = array(
+  $form['options_settings']['jpgio_ie']['jpgio_ie_enabled_css'] = array(
     '#type' => 'fieldset',
     '#title' => t('Check which IE versions you want to enable additional .css stylesheets for.'),
     '#states' => array(
       'visible' => array(
-        ':input[name="basic_ie_enabled"]' => array('checked' => TRUE),
+        ':input[name="jpgio_ie_enabled"]' => array('checked' => TRUE),
       ),
     ),
   );
-  $form['options_settings']['basic_ie']['basic_ie_enabled_css']['basic_ie_enabled_versions'] = array(
+  $form['options_settings']['jpgio_ie']['jpgio_ie_enabled_css']['jpgio_ie_enabled_versions'] = array(
     '#type' => 'checkboxes',
     '#options' => array(
       'ie8' => t('Internet Explorer 8'),
       'ie9' => t('Internet Explorer 9'),
     ),
-    '#default_value' => theme_get_setting('basic_ie_enabled_versions'),
+    '#default_value' => theme_get_setting('jpgio_ie_enabled_versions'),
   );
   $form['options_settings']['clear_registry'] = array(
     '#type' => 'checkbox',
