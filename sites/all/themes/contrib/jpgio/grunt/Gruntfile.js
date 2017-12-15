@@ -116,7 +116,7 @@ module.exports = function(grunt) {
           // than a browser refresh. In order for this to work with Drupal you
           // will need to install https://drupal.org/project/link_css keep in
           // mind though that this should not be run on a production site.
-          injectChanges: false
+          injectChanges: true
         }
       }
     },

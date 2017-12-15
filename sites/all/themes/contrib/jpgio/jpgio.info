@@ -2,7 +2,7 @@ name = JPGIO
 description = HTML5, SASS, Responsive grid base theme.
 screenshot = images/optimized/screenshot.gif
 core = "7.x"
-project = "jpgio"
+project = "basic"
 engine = phptemplate
 
 regions[page_top] = Page top
