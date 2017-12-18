@@ -4,10 +4,10 @@
  * @file
  */
 ?>
-<article class="<?php print $classes; ?>" data-nid="<?php print $node->nid; ?>" >
+<article class="inline-box <?php print $classes; ?>" data-nid="<?php print $node->nid; ?>" >
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
-    <header>
+     <header>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
@@ -27,13 +27,25 @@
     </header>
   <?php endif; ?>
 
-  <div class="content">
-    <?php
-    // We hide the comments to render below.
-    hide($content['comments']);
-    hide($content['links']);
-    print render($content);
-    ?>
+  <div class="content inline-box">
+    <div class="hero-outer">
+      <div class="hero-inner">
+        <div class="page-hero" style="background-image: url(<?php print file_create_url($node->field_hero_page_image['und'][0]['uri']) ?>)">
+          <?php if ($title): ?>
+            <h1 class="title"><?php print $title; ?></h1>
+          <?php endif; ?>
+
+          <?php
+          // We hide the comments to render below.
+          hide($content['comments']);
+          hide($content['links']);
+
+          print render($content);
+          dsm($node);
+          ?>
+        </div>
+      </div>
+    </div>
   </div><!-- /content -->
 
   <?php if (!empty($content['links']['terms'])): ?>
