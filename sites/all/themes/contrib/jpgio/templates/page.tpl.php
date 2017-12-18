@@ -4,7 +4,7 @@
  * @file
  */
 ?>
-<div id="page" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div id="page" class="inline-box <?php print $classes; ?>"<?php print $attributes; ?>>
 
   <!-- ______________________ HEADER _______________________ -->
 
@@ -74,9 +74,9 @@
 
   <!-- ______________________ MAIN _______________________ -->
 
-  <div id="main">
-    <div class="container">
-      <section id="content">
+  <div id="main" class="inline-box">
+    <div class="container inline-box">
+      <section id="content" class="inline-box">
 
         <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
           <!-- <div id="content-header"> -->
@@ -88,10 +88,6 @@
             <?php endif; ?>
 
             <?php print render($title_prefix); ?>
-
-            <?php if ($title): ?>
-              <h1 class="title"><?php print $title; ?></h1>
-            <?php endif; ?>
 
             <?php print render($title_suffix); ?>
             <?php print $messages; ?>
@@ -108,7 +104,7 @@
           <!-- </div> /#content-header -->
         <?php endif; ?>
 
-        <div id="content-area">
+        <div id="content-area" class="inline-box">
           <?php print render($page['content']) ?>
         </div>
 

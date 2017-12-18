@@ -10,9 +10,12 @@
 // 4. Sidebar Left
 // 5. Sideabr Right
 // Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.)
+body,html
+  padding: 0
+  height: 100%
 
 .container
-  @include outer-container
+  //@include outer-container
   margin-left: auto
   margin-right: auto
   width: auto
@@ -39,6 +42,7 @@
       @include span-columns(8)
 
   .one-sidebar.sidebar-first &
+    height: 100%
     // 100% width for mobile devices.
     @include fill-parent
     // Span this div 6 columns wide for tablets.
@@ -116,3 +120,6 @@
   li
     list-style-type: none
     display: inline-block
+
+.inline-box
+  display: inline
