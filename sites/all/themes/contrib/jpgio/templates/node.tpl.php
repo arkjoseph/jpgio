@@ -30,7 +30,8 @@
   <div class="content inline-box">
     <div class="hero-outer">
       <div class="hero-inner">
-        <div class="page-hero" style="background-image: url(<?php print file_create_url($node->field_hero_page_image['und'][0]['uri']) ?>)">
+        <div class="page-hero">
+            <div class="noise"></div>
           <?php if ($title): ?>
             <h1 class="title"><?php print $title; ?></h1>
           <?php endif; ?>
