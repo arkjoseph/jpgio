@@ -42,7 +42,7 @@
           hide($content['links']);
 
           print render($content);
-          dsm($node);
+          //dsm($node);
           ?>
         </div>
       </div>

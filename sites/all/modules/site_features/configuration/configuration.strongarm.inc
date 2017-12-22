@@ -35,7 +35,7 @@ function configuration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'JPGIO Management';
+  $strongarm->value = 'JPGIO';
   $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -68,7 +68,7 @@ function configuration_strongarm() {
     'default_logo' => 1,
     'logo_path' => '',
     'logo_upload' => '',
-    'default_favicon' => 1,
+    'default_favicon' => 0,
     'favicon_path' => '',
     'favicon_upload' => '',
     'jpgio_tabs' => 1,
@@ -82,7 +82,7 @@ function configuration_strongarm() {
       'ie8' => 0,
       'ie9' => 0,
     ),
-    'clear_registry' => 0,
+    'clear_registry' => 1,
   );
   $export['theme_jpgio_settings'] = $strongarm;
 
