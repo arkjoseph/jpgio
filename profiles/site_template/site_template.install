@@ -6,7 +6,7 @@
  */
 function site_template_install() {
   // Enable some site_template blocks.
-  $default_theme = 'basic';
+  $default_theme = 'jpgio';
   $admin_theme = 'rubik';
   // disable all themes
   db_update('system')

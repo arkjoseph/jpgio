@@ -244,18 +244,38 @@
  *   );
  * @endcode
  */
+
 $databases = array (
   'default' => 
   array (
     'default' => 
     array (
-      'database' => 'jpgio-dev',
+      'database' => 'jpgio-multisite',
       'username' => 'root',
       'password' => 'root',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
-      'prefix' => '',
+      'collation' => 'utf8_unicode_ci',
+      'prefix' => array (
+          'default'         => "shared_",
+          'cache'           => "www_",
+          'cache_block'     => "www_",
+          'cache_bootstrap' => "www_",
+          'cache_filter'    => "www_",
+          'cache_form'      => "www_",
+          'cache_image'     => "www_",
+          'cache_menu'      => "www_",
+          'cache_page'      => "www_",
+          'cache_path'      => "www_",
+          'cache_update'    => "www_",
+          'cache_features'  => "www_",
+          'registry'        => "www_",
+          'registry_file'   => "www_",
+          'semaphore'       => "www_",
+          'ctools_object_cache' => "www_",
+          'ctools_css_cache'    => "www_",
+      ),
     ),
   ),
 );
