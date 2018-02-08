@@ -1,14 +1,17 @@
 .idea
 .editorconfig
+.sass-cache
 
 # Ignore configuration files that may contain sensitive information.
 sites/default/settings.php
+sites/admin.jpgio.com/settings.php
 
 # Ignore paths that contain generated content.
 files/
 #sites/*/files
 #sites/*/private
 sites/*/*/development/link_css
+profiles/*/assets/*.sql
 
 # Ignore modules and themes. They come from seperate repo.
 
